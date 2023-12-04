@@ -35,8 +35,9 @@ public class Menu
             ResizeKeyboard = true
         };
 
-        await _botClient.SendTextMessageAsync(message.Chat.Id, "Juda yaxshi birgalikda buyurtma beramizmi? 😃",
-                                                       replyMarkup: replyKeyboard);
+        await _botClient.SendTextMessageAsync(message.Chat.Id, 
+                                             "Juda yaxshi birgalikda buyurtma beramizmi? 😃",
+                                             replyMarkup: replyKeyboard);
     }
 
     public async Task SelectSection(Message message)

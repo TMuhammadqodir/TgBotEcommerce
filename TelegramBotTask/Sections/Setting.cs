@@ -29,6 +29,8 @@ internal class Setting
             ResizeKeyboard = true
         };
 
-        await _botClient.SendTextMessageAsync(message.Chat.Id, "⚙️ Sozlamalar", replyMarkup: replyKeyboard);
+        await _botClient.SendTextMessageAsync(message.Chat.Id, 
+                                             "⚙️ Sozlamalar", 
+                                             replyMarkup: replyKeyboard);
     }
 }

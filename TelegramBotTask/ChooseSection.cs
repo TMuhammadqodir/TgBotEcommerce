@@ -69,7 +69,7 @@ public class ChooseSection
                 switch (messageText)
                 {
                     case "🛍 Buyurtma berish":
-                        await _order.SelectMethod(message);
+                        await _order.SelectCategories(message);
                         break;
 
                     case "✍️ Fikr bildirish":
@@ -77,10 +77,9 @@ public class ChooseSection
                         break;
 
                     case "☎️ Biz bilan aloqa":
-                        Message sendMessage = await botClient.SendTextMessageAsync(
-                             chatId: message.Chat.Id,
-                             text: "Agar sizda savollar bo'lsa bizga " +
-                             "telefon qilishingiz mumkin: +998 95-115-44-30"
+                        Message sendMessage = await botClient.SendTextMessageAsync( chatId: message.Chat.Id,
+                                                                                    text: "Agar sizda savollar bo'lsa bizga " +
+                                                                                    "telefon qilishingiz mumkin: +998 95-115-44-30"
                         );
                         break;
 

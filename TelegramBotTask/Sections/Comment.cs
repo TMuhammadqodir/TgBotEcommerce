@@ -40,10 +40,17 @@ public class Comment
             ResizeKeyboard = true
         };
 
-        await _botClient.SendTextMessageAsync(message.Chat.Id, "Fish and Breadni tanlaganingiz uchun rahmat." +
-                                                      "\nAgar siz bizning xizmat sifatimizni yaxshilashimizga " +
-                                                      "yordam bersangiz hursand bulardik." +
-                                                      "\nBuning uchun 5 bal tizim asosida baholang", 
-                                                      replyMarkup: replyKeyboard);
+        await _botClient.SendTextMessageAsync(message.Chat.Id, 
+                                              "Fish and Breadni tanlaganingiz uchun rahmat." +
+                                              "\nAgar siz bizning xizmat sifatimizni yaxshilashimizga " +
+                                              "yordam bersangiz hursand bulardik." +
+                                              "\nBuning uchun 5 bal tizim asosida baholang", 
+                                              replyMarkup: replyKeyboard);
+    }
+
+    public async Task SendMessage(Message message)
+    {
+        await _botClient.SendTextMessageAsync(message.Chat.Id,
+            "O'z fikr va mulohazalaringizni jo'nating.");
     }
 }
