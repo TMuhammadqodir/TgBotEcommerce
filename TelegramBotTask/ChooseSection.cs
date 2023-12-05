@@ -7,6 +7,7 @@ using TelegramBotTask.DbContexts;
 using TelegramBotTask.Sections;
 using TelegramBotTask.Models;
 using System.Threading;
+using Microsoft.EntityFrameworkCore;
 
 namespace TelegramBotTask;
 
@@ -54,9 +55,9 @@ public class ChooseSection
             check = false;
         }
 
-        if (message.Text is not null)
+        if (message.Text is not null || message.Location is not null)
         {
-            var user = _dbContext.Users.FirstOrDefault(user => user.ChatId.Equals(message.Chat.Id));
+            var user = await _dbContext.Users.FirstOrDefaultAsync(user => user.ChatId.Equals(message.Chat.Id));
 
             if (user is null)
             {
@@ -64,12 +65,23 @@ public class ChooseSection
             }
             else
             {
-                string messageText = message.Text;
+                string messageText = "";
+
+                var roadWays = await _dbContext.RoadWays.Where(r => r.ChatId.Equals(message.Chat.Id)).ToListAsync();
+
+                if (roadWays is null || roadWays.Count == 0)
+                {
+                    messageText = message.Text;
+                }
+                else
+                {
+                    messageText = roadWays[0].Name;
+                }
 
                 switch (messageText)
                 {
                     case "🛍 Buyurtma berish":
-                        await _order.SelectCategories(message);
+                        await _order.SelectMethod(message);
                         break;
 
                     case "✍️ Fikr bildirish":
@@ -77,7 +89,7 @@ public class ChooseSection
                         break;
 
                     case "☎️ Biz bilan aloqa":
-                        Message sendMessage = await botClient.SendTextMessageAsync( chatId: message.Chat.Id,
+                        Message sendMessage = await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
                                                                                     text: "Agar sizda savollar bo'lsa bizga " +
                                                                                     "telefon qilishingiz mumkin: +998 95-115-44-30"
                         );
@@ -92,7 +104,7 @@ public class ChooseSection
                         break;
 
                     default:
-                        await _menu.ShowSections(message); 
+                        await _menu.ShowSections(message);
                         break;
                 }
             }

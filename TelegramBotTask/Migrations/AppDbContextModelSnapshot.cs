@@ -48,43 +48,43 @@ namespace TelegramBotTask.Migrations
                         new
                         {
                             Id = 1L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8147),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4700),
                             Name = "Sho'volar"
                         },
                         new
                         {
                             Id = 2L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8149),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4703),
                             Name = "Choy"
                         },
                         new
                         {
                             Id = 3L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8150),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4704),
                             Name = "Kombo"
                         },
                         new
                         {
                             Id = 4L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8152),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4706),
                             Name = "Donorlar"
                         },
                         new
                         {
                             Id = 5L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8153),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4707),
                             Name = "Kotletlar"
                         },
                         new
                         {
                             Id = 6L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8154),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4708),
                             Name = "Kaboblar"
                         },
                         new
                         {
                             Id = 7L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8155),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4712),
                             Name = "Burgerlar"
                         });
                 });
@@ -132,7 +132,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 1L,
                             CategoryId = 1L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8269),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4791),
                             Description = "Qovoqli qaymoqli sho'rva - Bu mazali taom bo'lib, sizni kuz fasli muhitiga chorlaydi . Bizning qovoqli sho'rva - bu noziklik va mazali ta'mni o'zida mujassam etgan haqiqiy pazandalik san'atidir. Quritilgan non bilan beriladi.",
                             Name = "Qovoqli sho'rva",
                             Price = 25000f,
@@ -143,7 +143,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 2L,
                             CategoryId = 1L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8272),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4793),
                             Description = "Bizning qo'ziqorin qaymoqli sho'rva - bu yumshoq qo'ziqorinlar, yangi sabzavotlar va qaymoqni oziga mujassam etadi. Quritilgan non bilan tortiladi.",
                             Name = "Qo'ziqorin kremli sho'rva",
                             Price = 40000f,
@@ -154,7 +154,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 3L,
                             CategoryId = 2L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8275),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4795),
                             Description = "Mevali choy - tetiklantiruvchi va xushbo'y ichimlik bo'lib, u o'zgacha narsalarni qidiradiganlar uchun juda yaxshi. Sharbatli meva ta'mi choy bilan birgalikda o'ziga xos ta'm tajribasini yaratadi.",
                             Name = "Choy mevali",
                             Price = 25000f,
@@ -165,7 +165,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 4L,
                             CategoryId = 2L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8276),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4798),
                             Description = "Malinali choy - tazelik va shirinlikning ajoyib kombinatsiyasi. Yangi malinaning boy xushbo'yligi choyning nozikligi bilan birlashtirilib, hayratlanarli darajada ishtahani ochuvchi ichimlik yaratadi. Ushbu choyning har bir qultumi sizni malinaning yorqin ta'mi bilan to'ldiradi, ichimlikka o'ziga xos va tetiklantiruvchi xususiyat beradi.",
                             Name = "Malinali choy",
                             Price = 27000f,
@@ -176,7 +176,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 5L,
                             CategoryId = 3L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8278),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4799),
                             Description = "Rich and healthy, this set includes a delicious fish sandwich, a revitalizing arugula salad and your choice of an Americano or aromatic lemon tea. Enjoy the harmony of flavors and energy that this perfect combination brings.",
                             Name = "Kombo № 1",
                             Price = 70000f,
@@ -187,7 +187,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 6L,
                             CategoryId = 3L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8280),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4801),
                             Description = "Biz sizga 2-sonli kombinatni taqdim etamiz - ta'm va qulaylikni qadrlaydiganlar uchun ideal echim. Bu to‘plamga qishloq kartoshkalari, pishloq nuggetlari va muammosiz dam olish uchun Heinz pishloq sousi kiradi. Bunga engil va tetiklantiruvchi berry limonadini qo'shing va siz xohlagan joyda o'zingiz bilan olib ketishingiz mumkin bo'lgan to'liq zavqga ega bo'lasiz. Bizning Combo # 2 bilan xav",
                             Name = "Kombo № 1",
                             Price = 69000f,
@@ -198,7 +198,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 7L,
                             CategoryId = 4L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8282),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4803),
                             Description = "Go'sht katta aylanadigan shishlarda pishiriladi, so'ngra u yupqa plastina shaklida kesiladi, bo'laklarga bo'linadi va ko'katlar va sabzavotlar bilan birga non ustiga qo'yiladi.",
                             Name = "Donar sendvich mol go'shti",
                             Price = 48000f,
@@ -209,7 +209,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 8L,
                             CategoryId = 4L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8283),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4804),
                             Description = "Go'sht katta aylanadigan shishlarda pishiriladi, so'ngra u yupqa plastina shaklida kesiladi, bo'laklarga bo'linadi va ko'katlar va sabzavotlar bilan birga non ustiga qo'yiladi.\r\n",
                             Name = "Donar sendvich tovuq",
                             Price = 40000f,
@@ -220,7 +220,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 9L,
                             CategoryId = 5L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8285),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4806),
                             Description = "Shirali tovuq bo'laklari, xushbo'y guruch va yangi tug'ralgan sabzavotlardan iborat boy va mazali taomdir. Ushbu taom tog'ri va muvozanatli ovqatlanishni qidiradiganlar uchun ideal tanlovdir. Turk yopilgan noni \"Ekmek\" bilan beriladi.",
                             Name = "Tovuq garnir bilan",
                             Price = 42000f,
@@ -231,7 +231,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 10L,
                             CategoryId = 6L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8287),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4807),
                             Description = "Bizning mol go'shtidan kabobimiz - og'izingizda ertib ketadigan bo'lib pishadi. Har bir mol go'shtining yuqori sifati va nozikligi sizning taomingizni unutilmas qiladi.\r\nBiz kaboblarimiz uchun eng barra va eng tabiiy masaliqlarni tanlashga alohida e'tibor beramiz. Bizning oshpazimiz sizga eng yaxshi oshpazlik tajribasini taqdim etish uchun faqat eng yaxshi go'sht bo'laklarini tanlaydi.",
                             Name = "Shashlik (mol go'shti)",
                             Price = 60000f,
@@ -242,7 +242,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 11L,
                             CategoryId = 6L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8289),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4810),
                             Description = "Bizning qoy go'shtidan tayyorlangan kabob barchaga haqiqiy ta'mni biluvchilar uchun  gastronomik taomdir. Sizga haqiqiy oshpazlik mahoratini taklif qilish uchun, biz faqat eng yumshoq va shirali qoy go'shtidan foydalanamiz.\r\nHar bir go‘sht bo‘lagi o‘zining tabiiy seli va o‘ziga xos ta’mini saqlab qolish uchun professional tarzda qayta ishlanadi. Biz qoy go'shtini yumshoq va aromatik tuzilishga ega b",
                             Name = "Shashlik (qoy go'shti)",
                             Price = 70000f,
@@ -253,7 +253,7 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 12L,
                             CategoryId = 7L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8290),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4811),
                             Description = "Gamburger - bu xushbo'y ziravorlar, yangi bulochka va turli xil qo'shimchalar bilan kombinatsiyasi bo'lib, o'ziga xos ta'mni yaratadi.",
                             Name = "Gamburger",
                             Price = 23000f,
@@ -264,13 +264,74 @@ namespace TelegramBotTask.Migrations
                         {
                             Id = 13L,
                             CategoryId = 7L,
-                            CreateAt = new DateTime(2023, 12, 4, 8, 43, 25, 89, DateTimeKind.Utc).AddTicks(8292),
+                            CreateAt = new DateTime(2023, 12, 5, 21, 1, 49, 372, DateTimeKind.Utc).AddTicks(4815),
                             Description = "Gamburger - bu xushbo'y ziravorlar, yangi bulochka va turli xil qo'shimchalar bilan kombinatsiyasi bo'lib, o'ziga xos ta'mni yaratadi.",
                             Name = "Lavash",
                             Price = 24000f,
                             Quantity = "220 gr",
                             Tarkibi = "testtttttttttttttttttttttttttttttt"
                         });
+                });
+
+            modelBuilder.Entity("TelegramBotTask.Models.RoadWay", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ChatId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoadWays");
+                });
+
+            modelBuilder.Entity("TelegramBotTask.Models.UserBasket", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ChatId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<float>("TotalPrice")
+                        .HasColumnType("real");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserBaskets");
                 });
 
             modelBuilder.Entity("TelegramBotTask.Models.UserInformation", b =>

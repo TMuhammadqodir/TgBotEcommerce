@@ -12,9 +12,11 @@ public class AppDbContext : DbContext
         optionsBuilder.UseNpgsql(DatabasePath.ConnectionString);
     }
 
-    public DbSet<UserInformation> Users { get; set; }
-    public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<RoadWay> RoadWays { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<UserInformation> Users { get; set; }
+    public DbSet<UserBasket> UserBaskets { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
