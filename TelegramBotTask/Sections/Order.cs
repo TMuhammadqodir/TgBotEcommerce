@@ -316,9 +316,16 @@ public class Order
 
             await ShowCategories(message);
         }
-        else if (categories.Select(c => c.Name).Contains(message.Text) || roadWays.Count > 3)
+        else if(roadWays.Count > 3)
         {
-            await SelectProducts(message, message.Text);
+            if (roadWays[3].Name.Equals("📥 Savat"))
+                await ControllBasket(message);
+            else
+                await SelectProducts(message, message.Text);
+        }
+        else if (categories.Select(c => c.Name).Contains(message.Text))
+        {
+             await SelectProducts(message, message.Text);
         }
         else if(message.Text.Equals("📥 Savat"))
         {
@@ -497,17 +504,17 @@ public class Order
         var products = await _dbContext.UserBaskets.Where(u=> u.ChatId.Equals(message.Chat.Id)).ToListAsync();
 
         var productButtons = products
-            .Select(product => new KeyboardButton(product.ProductName))
+            .Select(product => new KeyboardButton("❌ "+product.ProductName))
             .ToArray();
 
         var additionalButtons = new[]
         {
-            new KeyboardButton("⬅️ Ortga"),
             new KeyboardButton("🔄 Tozalash"),
             new KeyboardButton("🚘 Buyurtma berish"),
+            new KeyboardButton("⬅️ Ortga"),
         };
 
-        var allButtons = additionalButtons.Concat(productButtons).ToArray();
+        var allButtons = productButtons.Concat(additionalButtons).ToArray();
 
         var rows = SplitIntoRows(allButtons, 1);
 
@@ -563,9 +570,9 @@ public class Order
 
             await ShowBasket(message);
         }
-        else if(products.Select(c => c.ProductName).Contains(message.Text))
+        else if(products.Select(c => ("❌ " + c.ProductName)).Contains(message.Text))
         {
-            var product = products.FirstOrDefault(p=> p.ProductName.Equals(message.Text));
+            var product = products.FirstOrDefault(p=> ("❌ "+p.ProductName).Equals(message.Text));
             _dbContext.UserBaskets.Remove(product);
             await _dbContext.SaveChangesAsync();
             await ShowBasket(message);
@@ -588,8 +595,14 @@ public class Order
         else if(message.Text.Contains("🚘 Buyurtma berish"))
         {
             await _botClient.SendTextMessageAsync(message.Chat.Id,
-                                                 "Buyurtmaga izoh qoldiring");
-            await ShowBasket(message);
+                                                 "Buyurtma berildi");
+            foreach (var product in products)
+            {
+                _dbContext.UserBaskets.Remove(product);
+            }
+
+            _dbContext.RoadWays.Remove(roadWays[3]);
+            await ShowCategories(message);
         }
 
         await _dbContext.SaveChangesAsync();
