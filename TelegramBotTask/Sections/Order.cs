@@ -462,6 +462,19 @@ public class Order
 
             _dbContext.RoadWays.Add(roadWay);
 
+            var productInformation = product.Name+"\n\n";
+
+            if(product.Description is not null)
+            {
+                productInformation += product.Description+"\n\n";
+            }
+            if(product.Tarkibi is not null)
+            {
+                productInformation += "Tarkibi: " + product.Tarkibi+"\n\nNarxi:"+product.Price;
+            }
+
+            await _botClient.SendTextMessageAsync(message.Chat.Id, productInformation);
+
             await ShowQuantity(message, productName);
         }
         else if (message.Text.Equals("⬅️ Ortga"))
