@@ -63,12 +63,25 @@ public class ChooseSection
             {
                 await _entrance.SendPhoneNumber(message.Chat.Id);
             }
+            else if (message.Text.Equals("/start"))
+            {
+                var roadWays = await _dbContext.RoadWays.Where(r => r.ChatId.Equals(message.Chat.Id)).ToListAsync();
+
+                foreach(var roadWay in roadWays)
+                {
+                    _dbContext.Remove(roadWay);
+                }
+
+                await _dbContext.SaveChangesAsync();
+
+                await _menu.ShowSections(message);
+            }
             else
             {
                 string messageText = "";
 
                 var roadWays = await _dbContext.RoadWays.Where(r => r.ChatId.Equals(message.Chat.Id)).ToListAsync();
-
+      
                 if (roadWays is null || roadWays.Count == 0)
                 {
                     messageText = message.Text;
@@ -115,7 +128,6 @@ public class ChooseSection
             check = true;
         }
     }
-
 
     Task Error(ITelegramBotClient botClient, Exception exception, CancellationToken token)
     {
