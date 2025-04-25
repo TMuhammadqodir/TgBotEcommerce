@@ -38,6 +38,12 @@ public class ChooseSection
 
     }
 
+    public async Task Start()
+    {
+        Console.WriteLine("Telegram bot started");
+        _client.StartReceiving(Update, Error);
+    }
+
     async Task Update(ITelegramBotClient botClient, Update update, CancellationToken token)
     {
         if (update.Message is not { } message)
