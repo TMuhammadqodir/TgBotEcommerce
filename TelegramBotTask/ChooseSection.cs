@@ -36,8 +36,6 @@ public class ChooseSection
         _comment = new Comment(_client);
         _entrance = new Entrance(_client);
 
-        Console.WriteLine("Any keyboard stop telegram bot");
-        Console.ReadKey();
     }
 
     async Task Update(ITelegramBotClient botClient, Update update, CancellationToken token)
