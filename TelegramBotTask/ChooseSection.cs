@@ -27,7 +27,7 @@ public class ChooseSection
         Console.WriteLine("Telegram bot started");
 
         _dbContext = new AppDbContext();
-        _client = new TelegramBotClient("6155300733:AAHu9bMym3V22wefvgqdCh5nAnJwQlYLFys");
+        _client = new TelegramBotClient("6155300733:AAEQeuhouWQWwopEcNYBwRU6vCZ_xEEJ6Bs");
         _client.StartReceiving(Update, Error);
         _menu = new Menu(_client);
         _info = new Info(_client);
